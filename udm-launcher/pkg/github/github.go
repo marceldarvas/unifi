@@ -13,7 +13,7 @@ var (
 
 func GetDirectoryListFromRepo(owner string, repo string, path string, opts *github.RepositoryContentGetOptions) ([]string, error) {
 	var names []string
-	_, directories, _, err := client.Repositories.GetContents(ctx, owner, repo, path, opts)
+	_, directories, _, err := client.Repositories.GetContents(context.Background(), owner, repo, path, opts)
 	if err != nil {
 		return nil, err
 	}
@@ -43,7 +43,7 @@ func GetDirectoryListFromRepo(owner string, repo string, path string, opts *gith
 }
 
 func CheckForFile(owner string, repo string, path string, opts *github.RepositoryContentGetOptions) bool {
-	file, _, _, err := client.Repositories.GetContents(ctx, owner, repo, path, opts)
+	file, _, _, err := client.Repositories.GetContents(context.Background(), owner, repo, path, opts)
 	if err != nil || file == nil {
 		return false
 	}
@@ -51,7 +51,7 @@ func CheckForFile(owner string, repo string, path string, opts *github.Repositor
 }
 
 func GetFileContents(owner string, repo string, path string, opts *github.RepositoryContentGetOptions) (string, error) {
-	file, _, _, err := client.Repositories.GetContents(ctx, owner, repo, path, opts)
+	file, _, _, err := client.Repositories.GetContents(context.Background(), owner, repo, path, opts)
 	if err != nil || file == nil {
 		log.Fatalf("unable to read %s/%s:%s", repo, path, opts.Ref)
 	}
