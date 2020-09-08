@@ -3,17 +3,12 @@ package githubClient
 import (
 	"context"
 	"github.com/google/go-github/v32/github"
-	"golang.org/x/oauth2"
 	"log"
 	"sync"
 )
 
 var (
-	ctx = context.Background()
-	ts  = oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: "dcc58041c12ea4619d1e8baa2df87a1a28602122"})
-	tc     = oauth2.NewClient(ctx, ts)
-	client = github.NewClient(tc)
+	client = github.NewClient(nil)
 )
 
 func GetDirectoryListFromRepo(owner string, repo string, path string, opts *github.RepositoryContentGetOptions) ([]string, error) {
