@@ -1,4 +1,3 @@
-unifi-os shell
-curl -L https://raw.githubusercontent.com/boostchicken/udm-utilities/master/on-boot-script/packages/udm-boot_1.0.2_all.deb -o udm-boot_1.0.2_all.deb
-dpkg -i udm-boot_1.0.2_all.deb
-exit
+podman -it exec unifi-os curl -L https://raw.githubusercontent.com/boostchicken/udm-utilities/master/on-boot-script/packages/udm-boot_1.0.2_all.deb -o /tmp/udm-boot_1.0.2_all.deb
+podman -it exec unifi-os dpkg -i /tmp/udm-boot_1.0.2_all.deb
+podman -it exec unifi-os rm -rf /tmp/udm-boot_1.0.2_all.deb
