@@ -3,3 +3,5 @@
 /**/debian/*.substvars
 debhelper-build-stamp
 .debhelper
+/udm-launcher/build/
+/udm-launcher/udm-launcher.iml
