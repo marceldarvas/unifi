@@ -1,3 +1,7 @@
 [submodule "udm-le"]
 	path = udm-le
 url=keybase://private/marceldarvas/udm-le
+[submodule "udm-utilities"]
+	path = udm-utilities
+	url = git@github.com:boostchicken/udm-utilities.git
+	branch = master
