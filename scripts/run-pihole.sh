@@ -1,3 +1,6 @@
+podman pull pihole/pihole:latest
+podman stop pihole
+podman rm pihole
 podman run -d --network dns --restart always \
 --name pihole \
 -e TZ="America/New York" \
@@ -5,6 +8,7 @@ podman run -d --network dns --restart always \
 -v "/mnt/data/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
 --dns=127.0.0.1 \
 --dns=1.1.1.1 \
+--dns=1.0.0.1 \
 --hostname pi.hole \
 -e CLOUDFLARED_OPTS="--port 5053 --address 0.0.0.0" \
 -e VIRTUAL_HOST="pi.hole" \
