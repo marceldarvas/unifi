@@ -29,7 +29,7 @@ IPV6_GW=""
 FORCED_INTFC="br5"
 
 # container name; e.g. nextdns, pihole, adguardhome, etc.
-CONTAINER=pihole
+CONTAINER=nextdns
 
 if ! test -f /opt/cni/bin/macvlan; then
     echo "Error: CNI plugins not found. You can install it with the following command:" >&2
