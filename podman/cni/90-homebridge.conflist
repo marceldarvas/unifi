@@ -4,16 +4,16 @@
   "plugins": [
       {
          "type": "bridge",
-         "bridge": "br0",
+         "bridge": "br6",
          "ipam": {
             "type": "host-local",
             "ranges": [
                 [
                     {
-                        "subnet": "10.0.5.1/24",
-                        "rangeStart": "10.0.5.10",
-                        "rangeEnd": "10.0.5.10",
-                        "gateway": "10.0.5.1" 
+                        "subnet": "10.0.6.0/24",
+                        "rangeStart": "10.0.6.10",
+                        "rangeEnd": "10.0.6.10",
+                        "gateway": "10.0.6.1" 
                     }
                 ]
             ],
