@@ -17,7 +17,3 @@ podman run -d --network dns --restart always \
 -e PIHOLE_DNS_="127.0.0.1#5053" \
 -e IPv6="False" \
 boostchicken/pihole:latest
-
-
-
-podman exec -it pihole pihole -a -p PASSSWORD_HERE
