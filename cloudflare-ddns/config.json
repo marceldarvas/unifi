@@ -1,20 +1,24 @@
 {
   "cloudflare": [
-    {
-      "authentication": {
-          "api_token": "bZor-vwObqOBU5_SF6ULbjIbhrPzd16L6GVbQIOh", 
-          "api_key": {
-              "api_key": "lzShtjSxuKPpEk_YqBQBJHmtn6rYBS6FzuhExsEY",
-              "account_email": "marcel@overace.agency"
-	        }
-      },
-      "zone_id": "3e45cfc8184f752589a62d06edf434c7",
-      "subdomains": [
-        "unifi",
-        "assistant"
-      ],
-      "proxied": true,
-      "ttl": 120
-    }
-  ]
-}
+     {
+       "authentication": {
+           "api_token": "bZor-vwObqOBU5_SF6ULbjIbhrPzd16L6GVbQIOh", 
+           "api_key": {
+               "api_key": "lzShtjSxuKPpEk_YqBQBJHmtn6rYBS6FzuhExsEY",
+               "account_email": "marcel@overace.agency"
+             }
+       },
+       "zone_id": "3e45cfc8184f752589a62d06edf434c7",
+       "subdomains": [
+         "unifi",
+         "assistant",
+         "node",
+         "lab",
+         "*.lab"
+       ],
+       "proxied": true,
+       "ttl": 120
+     }
+   ]
+ }
+ 
