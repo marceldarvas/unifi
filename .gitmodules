@@ -4,3 +4,9 @@ url=keybase://private/marceldarvas/udm-le
 [submodule "ntopng-udm"]
 	path = ntopng-udm
 	url = https://github.com/tusc/ntopng-udm.git
+[submodule "UDMPRO-samba"]
+	path = UDMPRO-samba
+	url = https://github.com/ddominet/UDMPRO-samba.git
+[submodule "samba-udm"]
+	path = samba-udm
+	url = https://github.com/ddominet/UDMPRO-samba.git
