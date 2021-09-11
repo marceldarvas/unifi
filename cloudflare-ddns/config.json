@@ -12,9 +12,8 @@
        "subdomains": [
          "unifi",
          "assistant",
-         "node",
-         "lab",
-         "*.lab"
+         "home",
+         "lab"
        ],
        "proxied": true,
        "ttl": 120
