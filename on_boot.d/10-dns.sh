@@ -2,10 +2,10 @@
 
 ## configuration variables:
 VLAN=5
-IPV4_IP="10.0.5.3"
+IPV4_IP="10.10.1.3"
 # This is the IP address of the container. You may want to set it to match
 # your own network structure such as 192.168.5.3 or similar.
-IPV4_GW="10.0.5.1/24"
+IPV4_GW="10.10.1.1/24"
 # As above, this should match the gateway of the VLAN for the container
 # network as above which is usually the .1/24 range of the IPV4_IP
 
@@ -26,7 +26,7 @@ IPV6_GW=""
 # set this to the interface(s) on which you want DNS TCP/UDP port 53 traffic
 # re-routed through the DNS container. separate interfaces with spaces.
 # e.g. "br0" or "br0 br1" etc.
-FORCED_INTFC="br5"
+FORCED_INTFC="br101"
 
 # container name; e.g. nextdns, pihole, adguardhome, etc.
 CONTAINER=pihole
@@ -36,14 +36,6 @@ if ! test -f /opt/cni/bin/macvlan; then
     echo "       curl -fsSLo /mnt/data/on_boot.d/05-install-cni-plugins.sh https://raw.githubusercontent.com/boostchicken/udm-utilities/master/cni-plugins/05-install-cni-plugins.sh && /bin/sh /mnt/data/on_boot.d/05-install-cni-plugins.sh" >&2
     exit 1
 fi
-
-CNI_PATH=/mnt/data/podman/cni
-for file in "$CNI_PATH"/*.conflist
-do
-    if [ -f "$file" ]; then
-        ln -fs "$file" "/etc/cni/net.d/$(basename "$file")"
-    fi
-done
 
 # set VLAN bridge promiscuous
 ip link set br${VLAN} promisc on

@@ -5,14 +5,14 @@
     {
       "type": "macvlan",
       "mode": "bridge",
-      "master": "br5",
+      "master": "br101",
       "mac": "24:a4:3c:25:2e:d0",
       "ipam": {
         "type": "static",
         "addresses": [
           {
-            "address": "10.0.5.3/24",
-            "gateway": "10.0.5.1"
+            "address": "10.10.1.3/24",
+            "gateway": "10.10.1.1"
           }
         ],
         "routes": [
