@@ -10,3 +10,7 @@ url=keybase://private/marceldarvas/udm-le
 [submodule "samba-udm"]
 	path = samba-udm
 	url = https://github.com/ddominet/UDMPRO-samba.git
+[submodule "udm-utilities"]
+	path = udm-utilities
+	url = git@github.com:boostchicken/udm-utilities.git
+	branch = master
