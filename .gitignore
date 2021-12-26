@@ -3,3 +3,8 @@
 /**/debian/*.substvars
 debhelper-build-stamp
 .debhelper
+udm-boot_1.0.5_all.deb
+.gitignore
+udm-utilities
+*.zip
+udm-utilities
