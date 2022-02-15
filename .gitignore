@@ -8,3 +8,4 @@ udm-boot_1.0.5_all.deb
 udm-utilities
 *.zip
 udm-utilities
+/cloudflare-ddns/configs/config.json

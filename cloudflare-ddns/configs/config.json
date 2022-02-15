@@ -2,22 +2,23 @@
   "cloudflare": [
      {
        "authentication": {
-           "api_token": "bZor-vwObqOBU5_SF6ULbjIbhrPzd16L6GVbQIOh", 
+           "api_token": "yaXYZvayg6Iie8_M3rthzkhKiaSOKXqUMsyvrLHm", 
            "api_key": {
-               "api_key": "lzShtjSxuKPpEk_YqBQBJHmtn6rYBS6FzuhExsEY",
+               "api_key": "9bba86e1886f64385861438fa30652e782c3d",
                "account_email": "marcel@overace.agency"
              }
        },
-       "zone_id": "yaXYZvayg6Iie8_M3rthzkhKiaSOKXqUMsyvrLHm",
+       "zone_id": "3e45cfc8184f752589a62d06edf434c7",
        "subdomains": [
          "unifi",
          "assistant",
          "home",
          "lab"
        ],
-       "proxied": true,
-       "ttl": 120
+       "proxied": true
      }
-   ]
- }
- 
+   ],
+   "a": true,
+   "aaaa": false,
+   "purgeUnknownRecords": false
+} 
