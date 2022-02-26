@@ -1,0 +1,1 @@
+podman run -it -d --restart=always --name="multicast-relay" --network=host -e OPTS=" --verbose --noMDNS" -e INTERFACES="br0 br10 br2 br3" docker.io/scyto/multicast-relay
